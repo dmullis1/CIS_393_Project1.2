@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Board Game Tracker</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<h1>Board Game Tracker</h1>
+	<form>
+		<label for="game-name">Game Name:</label>
+		<input type="text" id="game-name" name="game-name"><br>
+		<label for="like-dislike">Like or Dislike:</label>
+		<select id="like-dislike" name="like-dislike">
+			<option value="like">Like</option>
+			<option value="dislike">Dislike</option>
+		</select><br>
+		<label for="rating">Rating:</label>
+		<select id="rating" name="rating">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+		</select><br>
+        <label for="summary">Summary:</label><br>
+		<textarea id="summary" name="summary"></textarea><br>
+		<input type="button" value="Submit" class="btn" onclick="addGame()">
+	</form>
+
+	<table id="game-table">
+		<tr>
+			<th>Game Name</th>
+			<th>Summary</th>
+			<th>Like/Dislike</th>
+			<th>Rating</th>
+		</tr>
+	</table>
+
+	<script src="script.js"></script>
+</body>
+</html>

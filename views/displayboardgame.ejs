@@ -1,0 +1,80 @@
+<style>
+    body {
+     background-color: rgb(195, 192, 192);
+     font-family: Helvetica, sans-serif;
+     color: var(--font-color);
+  }
+  
+  main {
+     background-color: var(--bg-color);
+     margin: 0;
+     padding: 5px 10px;
+  }
+ 
+  header {
+     background-color: rgb(195,192,192);
+     padding: 5px 0;
+     margin: 0;
+  }
+  
+  nav ul {
+     list-style-type: none;
+     padding: 10px 0;
+  }
+  
+  nav li {
+     display: inline;
+  }
+  
+  nav li a {
+     text-decoration: none;  
+     padding: 10px 20px;
+  }
+  
+  nav li a:hover {
+     color: white;
+     background-color: rgb(47, 0, 255);    
+  }
+ 
+  input[type=text], input[type=number], select {
+     box-sizing: border-box;
+     width: 250px;
+     padding: 10px;
+     border: 1px solid #aaa;
+     border-radius: 4px;
+  }
+ 
+  input[type=submit] {
+     width: 250px;
+     background-color: #09f;
+     color: white;
+     padding: 15px;
+     margin: 10px 0;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+  }
+ 
+  input[type=submit]:hover {
+     background-color: #07d;
+  }
+ </style>
+<body>
+<h1 style="background-color:aquamarine;">Board Game Inofmration</h1>
+<table border=0>
+<tr style='text-align:left; background-color:rgb(171, 154, 188)'>
+<th>Game Name</th>
+<th>Like or Dislike</th>
+<th>Summary</th>
+<th>Rating</th>
+</tr>
+<% data.forEach(function(boardgame){ %>
+<tr style='text-align:left; background-color:rgb(231, 226, 237)'>
+<td><%=boardgame.GameName %></td>
+<td><%=boardgame.LikeOrDislike %></td>
+<td><%=boardgame.Summary%></td>
+<td><%=boardgame.Rating%></td>
+<% }) %>
+</tr>
+</table>
+</body>
